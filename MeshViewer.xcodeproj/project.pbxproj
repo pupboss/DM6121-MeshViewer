@@ -21,6 +21,8 @@
 		08033BDB224F5AB90019B7BC /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BDA224F5AB90019B7BC /* LaunchViewController.swift */; };
 		08033BDD224F5AC40019B7BC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BDC224F5AC40019B7BC /* NavigationController.swift */; };
 		08033BE0224F5B230019B7BC /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BDF224F5B230019B7BC /* SwiftProgressHUD.swift */; };
+		08033BE2224F63240019B7BC /* ThreeDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BE1224F63240019B7BC /* ThreeDModel.swift */; };
+		08033BE7224F6EE50019B7BC /* gargoyle.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08033BE6224F6EE50019B7BC /* gargoyle.txt */; };
 		B90A2D92EBAFA13B4F3E6154 /* Pods_MeshViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		08033BDA224F5AB90019B7BC /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = ../../../SwiftTemplate/SwiftTemplate/Controllers/LaunchViewController.swift; sourceTree = "<group>"; };
 		08033BDC224F5AC40019B7BC /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		08033BDF224F5B230019B7BC /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftProgressHUD.swift; sourceTree = "<group>"; };
+		08033BE1224F63240019B7BC /* ThreeDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDModel.swift; sourceTree = "<group>"; };
+		08033BE6224F6EE50019B7BC /* gargoyle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gargoyle.txt; sourceTree = "<group>"; };
 		48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.debug.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeshViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.release.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		08033BBB224F56A30019B7BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08033BE6224F6EE50019B7BC /* gargoyle.txt */,
 				08033BC1224F56A30019B7BC /* AppDelegate.swift */,
 				08033BBD224F56A30019B7BC /* LaunchScreen.storyboard */,
 				08033BBF224F56A30019B7BC /* Main.storyboard */,
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				08033BCC224F56F80019B7BC /* ErrorModel.swift */,
+				08033BE1224F63240019B7BC /* ThreeDModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				TargetAttributes = {
 					08033B97224F54970019B7BC = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					08033BAB224F54990019B7BC = {
 						CreatedOnToolsVersion = 10.2;
@@ -278,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08033BE7224F6EE50019B7BC /* gargoyle.txt in Resources */,
 				08033BC5224F56A30019B7BC /* Main.storyboard in Resources */,
 				08033BC3224F56A30019B7BC /* Assets.xcassets in Resources */,
 				08033BC4224F56A30019B7BC /* LaunchScreen.storyboard in Resources */,
@@ -366,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08033BD2224F570A0019B7BC /* UIKit.swift in Sources */,
+				08033BE2224F63240019B7BC /* ThreeDModel.swift in Sources */,
 				08033BCD224F56F80019B7BC /* ErrorModel.swift in Sources */,
 				08033BCA224F56F20019B7BC /* ViewController.swift in Sources */,
 				08033BD7224F571D0019B7BC /* Utils.swift in Sources */,
@@ -537,6 +546,7 @@
 			baseConfigurationReference = 48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8964PV2P6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/MeshViewer/Supporting Files/Info.plist";
@@ -547,6 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pupboss.MeshViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -557,6 +568,7 @@
 			baseConfigurationReference = F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8964PV2P6Z;
 				INFOPLIST_FILE = "$(SRCROOT)/MeshViewer/Supporting Files/Info.plist";

@@ -11,8 +11,4 @@ import Foundation
 struct Constants {
     
     static let apiHost = "https://api.google.com"
-    
-    static let authTokenDefaultsKey = "authTokenDefaultsKey"
-    
-    static let stripeAppKey = "pk_test_xxxxx"
 }

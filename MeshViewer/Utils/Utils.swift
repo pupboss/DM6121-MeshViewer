@@ -9,19 +9,41 @@
 import UIKit
 
 class Utils {
-    class func priceWithCurrencySymbol(currency: String, price: String) -> String {
-        var currencySymbol = "S$"
-        if currency.uppercased() == "USD" {
-            currencySymbol = "$"
-        } else if currency.uppercased() == "SGD" {
-            currencySymbol = "S$"
-        } else if currency.uppercased() == "CNY" {
-            currencySymbol = "￥"
-        } else {
-            currencySymbol = "$"
-        }
+    class func parseThreeDModel(fromFile file: String) -> ThreeDModel {
         
-        return "\(currencySymbol)\(price)"
+        var vertices: Array<ThreeDVertexModel> = []
+        var normals: Array<ThreeDVertexModel> = []
+        var faces: Array<ThreeDFaceModel> = []
+        
+        if let filepath = Bundle.main.path(forResource: file, ofType: "txt") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                let lines = contents.split(separator:"\n")
+                
+                for line in lines {
+                    if line.starts(with: "Vertex") {
+                        
+                        let vertexAndNormal = line.components(separatedBy: "  ")[1]
+                        let coordinates = vertexAndNormal.components(separatedBy: " ")
+                        vertices.append(ThreeDVertexModel(x: Float(coordinates[0])!, y: Float(coordinates[1])!, z: Float(coordinates[2])!))
+                        
+                        let x = coordinates[3].replacingOccurrences(of: "{normal=(", with: "")
+                        let z = coordinates[5].replacingOccurrences(of: ")}", with: "")
+                        let normal = ThreeDVertexModel(x: Float(x)!, y: Float(coordinates[4])!, z: Float(z)!)
+                        normals.append(normal)
+                    } else {
+                        let face = line.components(separatedBy: "  ")[1]
+                        let faceCoordinates = face.components(separatedBy: " ")
+                        faces.append(ThreeDFaceModel(x: Int(faceCoordinates[0])!, y: Int(faceCoordinates[1])!, z: Int(faceCoordinates[2])!))
+                    }
+                }
+                return ThreeDModel(vertices: vertices, normals: normals, faces: faces)
+            } catch {
+                return ThreeDModel(vertices: vertices, normals: normals, faces: faces)
+            }
+        } else {
+            return ThreeDModel(vertices: vertices, normals: normals, faces: faces)
+        }
     }
     
     class func appName() -> String {
