@@ -7,12 +7,7 @@
 //
 
 import UIKit
-
-struct ThreeDVertexModel {
-    let x: Float
-    let y: Float
-    let z: Float
-}
+import SceneKit
 
 struct ThreeDFaceModel {
     let x: Int
@@ -22,7 +17,7 @@ struct ThreeDFaceModel {
 
 struct ThreeDModel {
     
-    let vertices: Array<ThreeDVertexModel>
-    let normals: Array<ThreeDVertexModel>
+    let vertices: Array<SCNVector3>
+    let normals: Array<SCNVector3>
     let faces: Array<ThreeDFaceModel>
 }

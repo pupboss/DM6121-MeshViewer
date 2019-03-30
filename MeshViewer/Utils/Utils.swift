@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SceneKit
 
 class Utils {
     class func parseThreeDModel(fromFile file: String) -> ThreeDModel {
         
-        var vertices: Array<ThreeDVertexModel> = []
-        var normals: Array<ThreeDVertexModel> = []
+        var vertices: Array<SCNVector3> = []
+        var normals: Array<SCNVector3> = []
         var faces: Array<ThreeDFaceModel> = []
         
         if let filepath = Bundle.main.path(forResource: file, ofType: "txt") {
@@ -25,11 +26,11 @@ class Utils {
                         
                         let vertexAndNormal = line.components(separatedBy: "  ")[1]
                         let coordinates = vertexAndNormal.components(separatedBy: " ")
-                        vertices.append(ThreeDVertexModel(x: Float(coordinates[0])!, y: Float(coordinates[1])!, z: Float(coordinates[2])!))
+                        vertices.append(SCNVector3Make(Float(coordinates[0])!, Float(coordinates[1])!, Float(coordinates[2])!))
                         
                         let x = coordinates[3].replacingOccurrences(of: "{normal=(", with: "")
                         let z = coordinates[5].replacingOccurrences(of: ")}", with: "")
-                        let normal = ThreeDVertexModel(x: Float(x)!, y: Float(coordinates[4])!, z: Float(z)!)
+                        let normal = SCNVector3Make(Float(x)!, Float(coordinates[4])!, Float(z)!)
                         normals.append(normal)
                     } else {
                         let face = line.components(separatedBy: "  ")[1]
