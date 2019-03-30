@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08033B9C224F54970019B7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033B9B224F54970019B7BC /* AppDelegate.swift */; };
-		08033B9E224F54970019B7BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033B9D224F54970019B7BC /* ViewController.swift */; };
-		08033BA1224F54970019B7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08033B9F224F54970019B7BC /* Main.storyboard */; };
-		08033BA3224F54990019B7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08033BA2224F54990019B7BC /* Assets.xcassets */; };
-		08033BA6224F54990019B7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08033BA4224F54990019B7BC /* LaunchScreen.storyboard */; };
 		08033BB1224F54990019B7BC /* MeshViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BB0224F54990019B7BC /* MeshViewerTests.swift */; };
+		08033BC3224F56A30019B7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08033BBC224F56A30019B7BC /* Assets.xcassets */; };
+		08033BC4224F56A30019B7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08033BBD224F56A30019B7BC /* LaunchScreen.storyboard */; };
+		08033BC5224F56A30019B7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08033BBF224F56A30019B7BC /* Main.storyboard */; };
+		08033BC6224F56A30019B7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BC1224F56A30019B7BC /* AppDelegate.swift */; };
+		08033BCA224F56F20019B7BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BC9224F56F20019B7BC /* ViewController.swift */; };
+		08033BCD224F56F80019B7BC /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BCC224F56F80019B7BC /* ErrorModel.swift */; };
+		08033BD1224F570A0019B7BC /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BCF224F570A0019B7BC /* Foundation.swift */; };
+		08033BD2224F570A0019B7BC /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD0224F570A0019B7BC /* UIKit.swift */; };
+		08033BD6224F571D0019B7BC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD4224F571D0019B7BC /* Constant.swift */; };
+		08033BD7224F571D0019B7BC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD5224F571D0019B7BC /* Utils.swift */; };
+		B90A2D92EBAFA13B4F3E6154 /* Pods_MeshViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +33,23 @@
 
 /* Begin PBXFileReference section */
 		08033B98224F54970019B7BC /* MeshViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeshViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		08033B9B224F54970019B7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08033B9D224F54970019B7BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08033BA0224F54970019B7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		08033BA2224F54990019B7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08033BA5224F54990019B7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		08033BA7224F54990019B7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08033BAC224F54990019B7BC /* MeshViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeshViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08033BB0224F54990019B7BC /* MeshViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshViewerTests.swift; sourceTree = "<group>"; };
 		08033BB2224F54990019B7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08033BBC224F56A30019B7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08033BBE224F56A30019B7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		08033BC0224F56A30019B7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08033BC1224F56A30019B7BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		08033BC2224F56A30019B7BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08033BC9224F56F20019B7BC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08033BCC224F56F80019B7BC /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		08033BCF224F570A0019B7BC /* Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		08033BD0224F570A0019B7BC /* UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		08033BD4224F571D0019B7BC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		08033BD5224F571D0019B7BC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.debug.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeshViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.release.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90A2D92EBAFA13B4F3E6154 /* Pods_MeshViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +77,8 @@
 				08033B9A224F54970019B7BC /* MeshViewer */,
 				08033BAF224F54990019B7BC /* MeshViewerTests */,
 				08033B99224F54970019B7BC /* Products */,
+				2C2F85287F5F71403DEE3C7B /* Pods */,
+				217A7ED8A4CBBA350D158F34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +94,11 @@
 		08033B9A224F54970019B7BC /* MeshViewer */ = {
 			isa = PBXGroup;
 			children = (
-				08033B9B224F54970019B7BC /* AppDelegate.swift */,
-				08033B9D224F54970019B7BC /* ViewController.swift */,
-				08033B9F224F54970019B7BC /* Main.storyboard */,
-				08033BA2224F54990019B7BC /* Assets.xcassets */,
-				08033BA4224F54990019B7BC /* LaunchScreen.storyboard */,
-				08033BA7224F54990019B7BC /* Info.plist */,
+				08033BC8224F56F20019B7BC /* Controllers */,
+				08033BCB224F56F80019B7BC /* Models */,
+				08033BCE224F570A0019B7BC /* Extensions */,
+				08033BD3224F571D0019B7BC /* Utils */,
+				08033BBB224F56A30019B7BC /* Supporting Files */,
 			);
 			path = MeshViewer;
 			sourceTree = "<group>";
@@ -96,6 +112,70 @@
 			path = MeshViewerTests;
 			sourceTree = "<group>";
 		};
+		08033BBB224F56A30019B7BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				08033BC1224F56A30019B7BC /* AppDelegate.swift */,
+				08033BBD224F56A30019B7BC /* LaunchScreen.storyboard */,
+				08033BBF224F56A30019B7BC /* Main.storyboard */,
+				08033BBC224F56A30019B7BC /* Assets.xcassets */,
+				08033BC2224F56A30019B7BC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08033BC8224F56F20019B7BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08033BC9224F56F20019B7BC /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		08033BCB224F56F80019B7BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08033BCC224F56F80019B7BC /* ErrorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		08033BCE224F570A0019B7BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08033BCF224F570A0019B7BC /* Foundation.swift */,
+				08033BD0224F570A0019B7BC /* UIKit.swift */,
+			);
+			name = Extensions;
+			path = MeshViewer/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		08033BD3224F571D0019B7BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08033BD4224F571D0019B7BC /* Constant.swift */,
+				08033BD5224F571D0019B7BC /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		217A7ED8A4CBBA350D158F34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C2F85287F5F71403DEE3C7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */,
+				F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08033BB5224F54990019B7BC /* Build configuration list for PBXNativeTarget "MeshViewer" */;
 			buildPhases = (
+				BE2C468E73490180E31568D5 /* [CP] Check Pods Manifest.lock */,
 				08033B94224F54970019B7BC /* Sources */,
 				08033B95224F54970019B7BC /* Frameworks */,
 				08033B96224F54970019B7BC /* Resources */,
+				3A1BA558D50EFCD451600732 /* [CP] Embed Pods Frameworks */,
+				08033BD8224F57840019B7BC /* Run Script (Increase build number) */,
 			);
 			buildRules = (
 			);
@@ -177,9 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08033BA6224F54990019B7BC /* LaunchScreen.storyboard in Resources */,
-				08033BA3224F54990019B7BC /* Assets.xcassets in Resources */,
-				08033BA1224F54970019B7BC /* Main.storyboard in Resources */,
+				08033BC5224F56A30019B7BC /* Main.storyboard in Resources */,
+				08033BC3224F56A30019B7BC /* Assets.xcassets in Resources */,
+				08033BC4224F56A30019B7BC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +275,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08033BD8224F57840019B7BC /* Run Script (Increase build number) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Increase build number)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+		};
+		3A1BA558D50EFCD451600732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeshViewer/Pods-MeshViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeshViewer/Pods-MeshViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE2C468E73490180E31568D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeshViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08033B94224F54970019B7BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08033B9E224F54970019B7BC /* ViewController.swift in Sources */,
-				08033B9C224F54970019B7BC /* AppDelegate.swift in Sources */,
+				08033BD2224F570A0019B7BC /* UIKit.swift in Sources */,
+				08033BCD224F56F80019B7BC /* ErrorModel.swift in Sources */,
+				08033BCA224F56F20019B7BC /* ViewController.swift in Sources */,
+				08033BD7224F571D0019B7BC /* Utils.swift in Sources */,
+				08033BD1224F570A0019B7BC /* Foundation.swift in Sources */,
+				08033BC6224F56A30019B7BC /* AppDelegate.swift in Sources */,
+				08033BD6224F571D0019B7BC /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,20 +376,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		08033B9F224F54970019B7BC /* Main.storyboard */ = {
+		08033BBD224F56A30019B7BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				08033BA0224F54970019B7BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08033BA4224F54990019B7BC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08033BA5224F54990019B7BC /* Base */,
+				08033BBE224F56A30019B7BC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		08033BBF224F56A30019B7BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08033BC0224F56A30019B7BC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -358,11 +513,14 @@
 		};
 		08033BB6224F54990019B7BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8964PV2P6Z;
-				INFOPLIST_FILE = MeshViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MeshViewer/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +534,14 @@
 		};
 		08033BB7224F54990019B7BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8964PV2P6Z;
-				INFOPLIST_FILE = MeshViewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MeshViewer/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
