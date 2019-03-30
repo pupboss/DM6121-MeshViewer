@@ -9,15 +9,9 @@
 import UIKit
 import SceneKit
 
-struct ThreeDFaceModel {
-    let x: Int
-    let y: Int
-    let z: Int
-}
-
 struct ThreeDModel {
     
     let vertices: Array<SCNVector3>
     let normals: Array<SCNVector3>
-    let faces: Array<ThreeDFaceModel>
+    let faces: Array<UInt16>
 }

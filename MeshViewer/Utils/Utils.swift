@@ -14,7 +14,7 @@ class Utils {
         
         var vertices: Array<SCNVector3> = []
         var normals: Array<SCNVector3> = []
-        var faces: Array<ThreeDFaceModel> = []
+        var faces: Array<UInt16> = []
         
         if let filepath = Bundle.main.path(forResource: file, ofType: "txt") {
             do {
@@ -35,7 +35,9 @@ class Utils {
                     } else {
                         let face = line.components(separatedBy: "  ")[1]
                         let faceCoordinates = face.components(separatedBy: " ")
-                        faces.append(ThreeDFaceModel(x: Int(faceCoordinates[0])!, y: Int(faceCoordinates[1])!, z: Int(faceCoordinates[2])!))
+                        faces.append(UInt16(faceCoordinates[0])!)
+                        faces.append(UInt16(faceCoordinates[1])!)
+                        faces.append(UInt16(faceCoordinates[2])!)
                     }
                 }
                 return ThreeDModel(vertices: vertices, normals: normals, faces: faces)
