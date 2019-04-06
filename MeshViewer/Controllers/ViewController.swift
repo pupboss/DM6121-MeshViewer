@@ -33,6 +33,15 @@ class ViewController: UIViewController {
         
         return SCNNode(geometry: geometry)
     }()
+    
+    lazy var cameraNode: SCNNode = {
+        let cameraNode = SCNNode()
+        let camera = SCNCamera()
+        camera.fieldOfView = 15
+        cameraNode.camera = camera
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
+        return cameraNode
+    }()
 
     lazy var scene: SCNScene = {
         let scene = SCNScene()
@@ -46,13 +55,6 @@ class ViewController: UIViewController {
         scene.rootNode.addChildNode(floorNode)
         
         scene.rootNode.addChildNode(objectNode)
-
-        // camera
-        let cameraNode = SCNNode()
-        let camera = SCNCamera()
-        camera.fieldOfView = 15
-        cameraNode.camera = camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
         scene.rootNode.addChildNode(cameraNode)
         
         let lightNode = SCNNode()
@@ -87,8 +89,14 @@ class ViewController: UIViewController {
     
     lazy var switchControl: UISwitch = {
         let switchControl = UISwitch()
-        switchControl.isUserInteractionEnabled = true
+        switchControl.addTarget(self, action: #selector(switchStateDidChange(_:)), for: .valueChanged)
         return switchControl
+    }()
+    
+    lazy var motionManager: CMMotionManager = {
+        let motionManager = CMMotionManager()
+        motionManager.accelerometerUpdateInterval = 1/30
+        return motionManager
     }()
     
     override func viewDidLoad() {
@@ -109,6 +117,18 @@ class ViewController: UIViewController {
         switchControl.snp.makeConstraints { (make) in
             make.centerY.equalTo(switchLabel)
             make.leading.equalTo(switchLabel.snp.trailing).offset(16)
+        }
+    }
+    
+    @objc func switchStateDidChange(_ sender: UISwitch){
+        if (sender.isOn) {
+            motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
+                if let data = data {
+                    self.objectNode.eulerAngles = SCNVector3(data.acceleration.x, data.acceleration.y, data.acceleration.z)
+                }
+            }
+        } else {
+            motionManager.stopAccelerometerUpdates()
         }
     }
 }
