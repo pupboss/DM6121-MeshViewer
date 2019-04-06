@@ -9,8 +9,30 @@
 import UIKit
 import SceneKit
 import SnapKit
+import CoreMotion
 
 class ViewController: UIViewController {
+    
+    lazy var objectNode: SCNNode = {
+        // Create sources
+        let vertexSource = SCNGeometrySource(vertices: threeDModel.vertices)
+        let normalSource = SCNGeometrySource(normals: threeDModel.normals)
+        
+        // Create element
+        let solidElement = SCNGeometryElement(indices: threeDModel.faces, primitiveType: .point)
+        
+        // Create geometry
+        let geometry = SCNGeometry(sources: [vertexSource, normalSource], elements: [solidElement])
+        
+        // Set materials
+        let solidMaterial = SCNMaterial()
+        solidMaterial.diffuse.contents = UIColor.tc.theme
+        //        solidMaterial.locksAmbientWithDiffuse = true
+        
+        geometry.materials = [solidMaterial]
+        
+        return SCNNode(geometry: geometry)
+    }()
 
     lazy var scene: SCNScene = {
         let scene = SCNScene()
@@ -18,34 +40,18 @@ class ViewController: UIViewController {
         let floorNode = SCNNode()
         let floor = SCNFloor()
         floorNode.geometry = floor
-        floorNode.position = SCNVector3(0, -3, 0)
+        floorNode.position = SCNVector3(0, -2, 0)
         let floorPhysicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.static, shape: SCNPhysicsShape(geometry: floor, options: nil))
         floorNode.physicsBody = floorPhysicsBody
         scene.rootNode.addChildNode(floorNode)
         
-        // Create sources
-        let vertexSource = SCNGeometrySource(vertices: threeDModel.vertices)
-        let normalSource = SCNGeometrySource(normals: threeDModel.normals)
-
-        // Create element
-        let solidElement = SCNGeometryElement(indices: threeDModel.faces, primitiveType: .point)
-
-        // Create geometry
-        let geometry = SCNGeometry(sources: [vertexSource, normalSource], elements: [solidElement])
-
-        // Set materials
-        let solidMaterial = SCNMaterial()
-        solidMaterial.diffuse.contents = UIColor.tc.theme
-//        solidMaterial.locksAmbientWithDiffuse = true
-
-        geometry.materials = [solidMaterial]
-
-        let cubeNode = SCNNode(geometry: geometry)
-        scene.rootNode.addChildNode(cubeNode)
+        scene.rootNode.addChildNode(objectNode)
 
         // camera
         let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
+        let camera = SCNCamera()
+        camera.fieldOfView = 15
+        cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
         scene.rootNode.addChildNode(cameraNode)
         
@@ -71,14 +77,38 @@ class ViewController: UIViewController {
         return Utils.parseThreeDModel(fromFile: "bunny")
     }()
     
+    lazy var switchLabel: UILabel = {
+        let switchLabel = UILabel()
+        switchLabel.text = "Accelerometer:"
+        switchLabel.textColor = UIColor.tc.subBackground
+        switchLabel.font = UIFont.systemFont(ofSize: 15)
+        return switchLabel
+    }()
+    
+    lazy var switchControl: UISwitch = {
+        let switchControl = UISwitch()
+        switchControl.isUserInteractionEnabled = true
+        return switchControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.tc.background
         view.addSubview(threeDView)
+        view.addSubview(switchLabel)
+        view.addSubview(switchControl)
         
         threeDView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
+        }
+        switchLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(view).offset(16)
+            make.bottom.equalTo(view).offset(-30)
+        }
+        switchControl.snp.makeConstraints { (make) in
+            make.centerY.equalTo(switchLabel)
+            make.leading.equalTo(switchLabel.snp.trailing).offset(16)
         }
     }
 }
