@@ -18,11 +18,11 @@
 		08033BD2224F570A0019B7BC /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD0224F570A0019B7BC /* UIKit.swift */; };
 		08033BD6224F571D0019B7BC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD4224F571D0019B7BC /* Constant.swift */; };
 		08033BD7224F571D0019B7BC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BD5224F571D0019B7BC /* Utils.swift */; };
-		08033BDB224F5AB90019B7BC /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BDA224F5AB90019B7BC /* LaunchViewController.swift */; };
 		08033BDD224F5AC40019B7BC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BDC224F5AC40019B7BC /* NavigationController.swift */; };
 		08033BE2224F63240019B7BC /* ThreeDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08033BE1224F63240019B7BC /* ThreeDModel.swift */; };
 		08033BE7224F6EE50019B7BC /* gargoyle.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08033BE6224F6EE50019B7BC /* gargoyle.txt */; };
 		08033BE9224F99600019B7BC /* bunny.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08033BE8224F99600019B7BC /* bunny.txt */; };
+		086CCDCA225871420043F21B /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CCDC9225871420043F21B /* LaunchViewController.swift */; };
 		B90A2D92EBAFA13B4F3E6154 /* Pods_MeshViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,11 +52,11 @@
 		08033BD0224F570A0019B7BC /* UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		08033BD4224F571D0019B7BC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		08033BD5224F571D0019B7BC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		08033BDA224F5AB90019B7BC /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchViewController.swift; path = ../../../SwiftTemplate/SwiftTemplate/Controllers/LaunchViewController.swift; sourceTree = "<group>"; };
 		08033BDC224F5AC40019B7BC /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		08033BE1224F63240019B7BC /* ThreeDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDModel.swift; sourceTree = "<group>"; };
 		08033BE6224F6EE50019B7BC /* gargoyle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gargoyle.txt; sourceTree = "<group>"; };
 		08033BE8224F99600019B7BC /* bunny.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bunny.txt; sourceTree = "<group>"; };
+		086CCDC9225871420043F21B /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		48D96DE477C971251AF15521 /* Pods-MeshViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.debug.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		9F4A2668755A983077A01EA5 /* Pods_MeshViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeshViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F825212E93BD59D319135F2F /* Pods-MeshViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeshViewer.release.xcconfig"; path = "Target Support Files/Pods-MeshViewer/Pods-MeshViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				08033BDC224F5AC40019B7BC /* NavigationController.swift */,
-				08033BDA224F5AB90019B7BC /* LaunchViewController.swift */,
+				086CCDC9225871420043F21B /* LaunchViewController.swift */,
 				08033BC9224F56F20019B7BC /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -375,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08033BD2224F570A0019B7BC /* UIKit.swift in Sources */,
+				086CCDCA225871420043F21B /* LaunchViewController.swift in Sources */,
 				08033BE2224F63240019B7BC /* ThreeDModel.swift in Sources */,
 				08033BCD224F56F80019B7BC /* ErrorModel.swift in Sources */,
 				08033BCA224F56F20019B7BC /* ViewController.swift in Sources */,
@@ -383,7 +384,6 @@
 				08033BD1224F570A0019B7BC /* Foundation.swift in Sources */,
 				08033BC6224F56A30019B7BC /* AppDelegate.swift in Sources */,
 				08033BD6224F571D0019B7BC /* Constant.swift in Sources */,
-				08033BDB224F5AB90019B7BC /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
