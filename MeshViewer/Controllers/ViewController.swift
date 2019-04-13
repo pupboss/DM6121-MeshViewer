@@ -27,8 +27,11 @@ class ViewController: UIViewController {
         // Set materials
         let solidMaterial = SCNMaterial()
         solidMaterial.diffuse.contents = UIColor.tc.theme
-        //        solidMaterial.locksAmbientWithDiffuse = true
-        
+        solidMaterial.fillMode = .lines
+        solidMaterial.selfIllumination.contents = UIColor.tc.theme
+        solidMaterial.roughness.contents = UIColor.tc.theme
+        solidMaterial.metalness.contents = UIColor.tc.theme
+        solidMaterial.lightingModel = .physicallyBased
         geometry.materials = [solidMaterial]
         
         return SCNNode(geometry: geometry)
