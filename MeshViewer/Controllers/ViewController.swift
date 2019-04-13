@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     lazy var cameraNode: SCNNode = {
         let cameraNode = SCNNode()
         let camera = SCNCamera()
-        camera.fieldOfView = 15
+        camera.fieldOfView = 1
         cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
         return cameraNode
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         let floorNode = SCNNode()
         let floor = SCNFloor()
         floorNode.geometry = floor
-        floorNode.position = SCNVector3(0, -2, 0)
+        floorNode.position = SCNVector3(0, -0.06, 0)
         let floorPhysicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.static, shape: SCNPhysicsShape(geometry: floor, options: nil))
         floorNode.physicsBody = floorPhysicsBody
         scene.rootNode.addChildNode(floorNode)
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         if (sender.isOn) {
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
                 if let data = data {
-                    self.objectNode.eulerAngles = SCNVector3(data.acceleration.x, data.acceleration.y, data.acceleration.z)
+                    self.objectNode.eulerAngles = SCNVector3(-data.acceleration.x, -data.acceleration.y, -data.acceleration.z)
                 }
             }
         } else {
