@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     lazy var switchLabel: UILabel = {
         let switchLabel = UILabel()
         switchLabel.text = "Accelerometer:"
-        switchLabel.textColor = UIColor.tc.subBackground
+        switchLabel.textColor = UIColor.darkGray
         switchLabel.font = UIFont.systemFont(ofSize: 15)
         return switchLabel
     }()
@@ -127,7 +127,8 @@ class ViewController: UIViewController {
         if (sender.isOn) {
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
                 if let data = data {
-                    self.objectNode.eulerAngles = SCNVector3(-data.acceleration.x, -data.acceleration.y, -data.acceleration.z)
+                    let e = self.objectNode.eulerAngles
+                    self.objectNode.eulerAngles = SCNVector3(e.x + Float(data.acceleration.x / 50), e.y + Float(data.acceleration.y / 50), e.z + Float(data.acceleration.z / 50))
                 }
             }
         } else {
